@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs")%>
+<div class="ui container segment margine">
+	
+
+<%blog.forEach(function(blogs){%>
+
+<div class="ui items ">
+  <div class="item ">
+    <div class="image rounded">
+      <img src="<%=blogs.image%>">
+    </div>
+    <div class="content">
+      <a class="header"><%=blogs.title%></a>
+      <div class="meta">
+        <span><%=blogs.created.toDateString()%></span>
+      </div>
+      <div class="description">
+        <p><%=blogs.body.substring(0,100)%>...</p>
+      </div>
+      <div class="extra">
+       <a href="/blogs/<%=blogs._id%>">Read More!</a>
+      </div>
+    </div>
+
+	</div>
+
+	
+<%})%>
+	</div>
+<%- include ("partials/footer.ejs")%>
