@@ -30,7 +30,7 @@ app.get("/blogs", function(req,res){
 			 {
 		if(err) console.log(err);
 		else
-			res.render("index.ejs",{blog:blogs});
+		res.render("index.ejs",{blog:blogs});
 	});
 });
 //New Route
