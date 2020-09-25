@@ -6,7 +6,8 @@ var mongoose=require("mongoose"),
 	methodOverride=require("method-override");
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
-mongoose.connect("mongodb://localhost:27017/yelp_camp",{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://Nandini:sne123@cluster0-shard-00-00.knzgk.mongodb.net:27017,cluster0-shard-00-01.knzgk.mongodb.net:27017,cluster0-shard-00-02.knzgk.mongodb.net:27017/blog_entries?ssl=true&replicaSet=atlas-n7zeo1-shard-0&authSource=admin&retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true });
+//
 var blogSchema=new mongoose.Schema({
 	title: String, image: String, body: String, created:{type:Date, default: Date.now}
 });
